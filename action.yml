@@ -1,5 +1,5 @@
 name: 'Send a message to google chat'
-description: 'Send a a message to google chat'
+description: 'Send a message to google chat'
 author: 'feecompass'
 inputs:
   url: 
