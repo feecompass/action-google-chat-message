@@ -109,7 +109,7 @@ function sendMessage(url, msgText) {
     return __awaiter(this, void 0, void 0, function* () {
         core.info(github.context.eventName);
         core.info(JSON.stringify(github.context.payload));
-        let body = { text: msgText };
+        const body = { text: msgText };
         const response = yield axios_1.default.post(url, body);
         if (response.status !== 200) {
             throw new Error(`Google Chat notification failed. response status=${response.status}`);
