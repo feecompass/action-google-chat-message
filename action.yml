@@ -1,11 +1,13 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Send a message to google chat'
+description: 'Send a a message to google chat'
+author: 'feecompass'
 inputs:
-  milliseconds: # change this
+  url: 
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'chat webhook url'
+  message: 
+    required: true
+    description: 'text to send'
 runs:
   using: 'node12'
   main: 'dist/index.js'
