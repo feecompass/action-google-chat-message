@@ -12,14 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          npm install
+         npm install
       - run: |
-          npm run all
+         npm run all
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          url: http://example.com
+          url: ${{ secrets.CHAT_WEBHOOK_URL }}
           message: "test message"

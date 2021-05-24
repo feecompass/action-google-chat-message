@@ -52,7 +52,7 @@ function run() {
             const url = core.getInput('url', { required: true });
             const message = core.getInput('message', { required: true });
             core.debug(`Sending message ${message}`);
-            message_1.sendMessage(url, message);
+            yield message_1.sendMessage(url, message);
         }
         catch (error) {
             core.setFailed(error.message);
